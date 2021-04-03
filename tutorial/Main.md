@@ -1,39 +1,48 @@
-.App {
-  height: 100%;
+Add message box and board in main
 
-  max-width: 800px;
-  margin: 0 auto;
+```html
+App.tsx
 
-  display: flex;
-  flex-direction: column;
-}
+<main>
+  <div className="alert text-white text-center" role="alert">
+    Computer Thinking !!
+  </div>
 
-header {
-  flex: 0 0 10%;
+  <div className="board p-3">
+    <table className="text-light text-center">
+      <tr>
+        <td className="top-left">-</td>
+        <td className="top-center">-</td>
+        <td className="top-right">-</td>
+      </tr>
+      <tr>
+        <td className="middle-left">-</td>
+        <td className="middle-center">-</td>
+        <td className="middle-right">-</td>
+      </tr>
+      <tr>
+        <td className="bottom-left">-</td>
+        <td className="bottom-center">-</td>
+        <td className="bottom-right">-</td>
+      </tr>
+    </table>
+  </div>
+</main>
+```
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-main {
-  flex: 1 1 auto;
-
-  display: flex;
-  flex-direction: column;
-}
-
-footer {
-  flex: 0 0 10%;
-}
-
+Add styles for table (styles already discussed earlier)
+```css
 .board {
+
+  /* Expand or contract current div to fill all space */
   flex: 1 1 auto;
 
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+/* These styles are self explanatory */
 
 table {
   width: 100%;
@@ -117,3 +126,4 @@ td {
   border-bottom-color: var(--empty);
   border-left-color: var(--filled);
 }
+```
