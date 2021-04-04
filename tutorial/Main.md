@@ -48,6 +48,7 @@ table {
   width: 100%;
   height: 100%;
   margin: 0 auto;
+  table-layout: fixed;
 }
 
 td {
@@ -127,3 +128,5 @@ td {
   border-left-color: var(--filled);
 }
 ```
+
+Next open [Functioning](./Functioning.md)
